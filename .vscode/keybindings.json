@@ -1,0 +1,18 @@
+[
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.positionPanelRight"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "workbench.action.positionPanelBottom"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.positionPanelRight"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "workbench.action.positionPanelBottom"
+    }
+]
