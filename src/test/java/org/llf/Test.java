@@ -1,6 +1,7 @@
 package org.llf;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -11,7 +12,20 @@ public class Test {
 
     public static void main(String[] args) {
         @SuppressWarnings("unused")
-        WebDriver driver = new FirefoxDriver();
-        driver.get(url);
+        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        
+        options.setBinary("C:\\Users\\shahid\\bin\\chrome-win\\chrome-win\\chrome.exe");
+//        options.setBinary("C:\\Users\\shahid\\bin\\chrome-win\\brave-win\\brave.exe"); // U can also use brave the same way.
+        driver.navigate().to(url);
+        driver.navigate().to("https://google.com");
+        driver.navigate().back();
+        try {
+			Thread.sleep(500);
+			driver.quit();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 }
